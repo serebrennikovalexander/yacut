@@ -9,7 +9,7 @@ from .views import get_unique_short_id
 from settings import STRING_LENGTH
 
 
-def is_valid_string(s, pattern=r"^[a-zA-Z0-9]+$"):
+def is_valid_string(s, pattern=r'^[a-zA-Z0-9]+$'):
     return bool(re.match(pattern, s))
 
 
