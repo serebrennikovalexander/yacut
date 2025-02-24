@@ -10,17 +10,17 @@ MAX_LENGTH_FOR_CUSTOM_ID = 16
 
 class URLMapForm(FlaskForm):
     original_link = StringField(
-        "Длинная ссылка",
+        'Длинная ссылка',
         validators=[
-            DataRequired(message="Обязательное поле"),
+            DataRequired(message='Обязательное поле'),
             Length(MIN_LENGTH_FOR_ORIGINAL_LINK, MAX_LENGTH_FOR_ORIGINAL_LINK),
         ],
     )
     custom_id = StringField(
-        "Ваш вриант короткой ссылки",
+        'Ваш вриант короткой ссылки',
         validators=[
             Length(MIN_LENGTH_FOR_CUSTOM_ID, MAX_LENGTH_FOR_CUSTOM_ID),
             Optional(),
         ],
     )
-    submit = SubmitField("Создать")
+    submit = SubmitField('Создать')

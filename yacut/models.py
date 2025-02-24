@@ -22,7 +22,7 @@ class URLMap(db.Model):
         }
 
     def from_dict(self, data):
-        if "url" in data:
-            setattr(self, "original", data["url"])
-        if "custom_id" in data:
-            setattr(self, "short", data["custom_id"])
+        if 'url' in data:
+            setattr(self, 'original', data['url'])
+        if 'custom_id' in data:
+            setattr(self, 'short', data['custom_id'])
